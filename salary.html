@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculation</title>
+</head>
+<body>
+    <h2>Employee Salary Calculation</h2>
+
+    <form>
+        Employee Name:
+        <input type="text"><br><br>
+
+        Basic Salary:
+        <input type="number" id="basic"><br><br>
+
+        HRA:
+        <input type="number" id="hra"><br><br>
+
+        Allowances:
+        <input type="number" id="allowance"><br><br>
+
+        Deductions:
+        <input type="number" id="deduction"><br><br>
+
+        <button type="button" onclick="
+            let b = Number(document.getElementById('basic').value);
+            let h = Number(document.getElementById('hra').value);
+            let a = Number(document.getElementById('allowance').value);
+            let d = Number(document.getElementById('deduction').value);
+            document.getElementById('result').innerHTML =
+            'Net Salary: ₹' + (b+h+a-d);
+        ">Calculate Salary</button>
+
+        <h3 id="result"></h3>
+    </form>
+</body>
+</html>
